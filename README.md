@@ -8,7 +8,7 @@ css/style.css
 js/main.js
 assets/
   resume.pdf
-  images/   (favicon, og-image, profile-placeholder.svg, project-*.svg)
+  images/   (favicon, og-image, project-*.svg (banner placeholders))
 ```
 
 ## Run locally
@@ -17,9 +17,9 @@ assets/
 (Or run `python3 -m http.server` in this folder and open http://localhost:8000.)
 
 ## Things you must replace
-- **Photo:** put your square photo at `assets/images/profile.jpg`, then in `index.html` change the About card `<img src="assets/images/profile-placeholder.svg">` to `profile.jpg` (and update its `alt`). It is shown in black and white automatically.
-- **Project links:** each "View Project" button points to your GitHub profile. Replace the four `https://github.com/souravhun27` project hrefs with the real repo/live URLs.
-- **Project images:** swap `assets/images/project-*.svg` for real screenshots (16:9 works best) and update the `src`/`alt`.
+- **Photo:** your portrait is `assets/images/profile.jpg` (square, black & white, dark background). To change it, replace that file and keep the same name.
+- **Project links:** the four "View Project" buttons point to your GitHub repos. After you deploy projects, add their live URLs next to them.
+- **Project images:** swap `assets/images/project-*.svg (banner placeholders)` for real screenshots (16:9 works best) and update the `src`/`alt`.
 - **Social preview:** after deploying, change `og:image` / `twitter:image` in `<head>` to an absolute URL, e.g. `https://USERNAME.github.io/REPO/assets/images/og-image.png`.
 
 ## Push to GitHub

@@ -282,6 +282,13 @@ svg[aria-hidden="true"] { width: 1em; height: 1em; flex: none; }
 
 .stack-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 6px; flex-wrap: wrap; }
 
+/* ---------- full skills card ---------- */
+.all-skills { margin-top: var(--gap); }
+.skill-groups { display: grid; gap: 22px 32px; grid-template-columns: 1fr; }
+.skill-group h4 { margin: 0 0 10px; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink); }
+@media (min-width: 720px) { .skill-groups { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .skill-groups { grid-template-columns: repeat(3, 1fr); } }
+
 /* ---------- trio (education etc.) ---------- */
 .trio { display: grid; gap: var(--gap); grid-template-columns: 1fr; }
 .timeline { display: grid; gap: 18px; }
@@ -368,7 +375,6 @@ svg[aria-hidden="true"] { width: 1em; height: 1em; flex: none; }
 @media (min-width: 600px) {
   .about-card { grid-template-columns: 220px 1fr; gap: 32px; padding: 20px 32px 20px 20px; }
   .avatar { aspect-ratio: 1 / 1; }
-  .resume-card { grid-template-columns: auto 1fr; gap: 24px; }
   .resume-bar { margin-left: 0; }
 }
 
@@ -378,8 +384,6 @@ svg[aria-hidden="true"] { width: 1em; height: 1em; flex: none; }
   .trio { grid-template-columns: 1fr 1fr; }
   .trio > :last-child { grid-column: 1 / -1; }
   .resume-grid { grid-template-columns: 1.2fr 1fr; }
-  /* in the narrow right column, stack heading above bar */
-  .bento-right .resume-card { grid-template-columns: 1fr; gap: 14px; }
   .stack { height: 290px; }
 }
 
@@ -392,13 +396,8 @@ svg[aria-hidden="true"] { width: 1em; height: 1em; flex: none; }
 @media (min-width: 1000px) {
   .trio { grid-template-columns: repeat(3, 1fr); }
   .trio > :last-child { grid-column: auto; }
-  .bento-right .resume-card { grid-template-columns: auto 1fr; gap: 20px; }
-}
-@media (min-width: 1000px) and (max-width: 1199px) {
-  .bento-right .resume-card { grid-template-columns: 1fr; }
 }
 @media (min-width: 1200px) {
-  .bento-right .resume-card { grid-template-columns: auto 1fr; }
   .stack { height: 300px; }
 }
 

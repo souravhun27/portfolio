@@ -18,7 +18,7 @@
   $$('[data-stagger]').forEach(group => {
     $$('.reveal', group).forEach((el, i) => el.style.setProperty('--d', `${Math.min(i, 6) * 90}ms`));
   });
-  $$('.chip').forEach((chip, i) => chip.style.setProperty('--i', i));
+  $$('.skills-card').forEach(card => $$('.chip', card).forEach((chip, i) => chip.style.setProperty('--i', i)));
 
   const markDone = el => setTimeout(() => el.classList.add('done'), 1600);
 
